@@ -29,13 +29,12 @@ def ReadFile():
 	with open( 'SO203_06_Q1_input.txt', mode='r', encoding='utf-8') as f:
 		file_txt = f.readline()
 		return file_txt.replace('\n', '')
-
 try:
 	txt = input('何か入力してください>')
 finally:
-	if len(txt) == 0:
+	if not txt:
 		txt = ReadFile()
-
+		
 txt_len = len(txt)
 print('「%s」は、%d文字です。' % (txt, txt_len)) 
 print('「{}」は、{}文字です。'.format(txt, txt_len))
