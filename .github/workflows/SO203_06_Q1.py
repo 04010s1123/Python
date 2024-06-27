@@ -24,8 +24,19 @@ P.5「組み込み関数」のソースコードを作成してください。
 
 
 # ここより下に解答を記載する。
-txt = input('何か入力してください>')
-txt_len = len(txt)
+import sys
+try:
+	with open( './SO203_06_Q1_input.txt', encoding='utf-8') as f:
+		file_txt = f.read()
+except Err1:
+try:
+	txt = input('何か入力してください>')
+except Err2:
+	if len(txt) == 0:
+		txt = file_txt
+		txt_len = len(txt)
+	else:
+		txt_len = len(txt)
 print('「%s」は、%d文字です。' % (txt, txt_len)) 
 print('「{}」は、{}文字です。'.format(txt, txt_len))
 print(f'「{txt}」は、{txt_len}文字です。')
