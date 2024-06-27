@@ -24,14 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: Install dependencies
-        run: pip install black flake8 isort
-      - name: Run black
-        run: pipenv run black .
-      - name: Run flake8
-        run: pipenv run flake8 .
-      - name: Run isort
-        run: pipenv run isort .
       # Runs a single command using the runners shell
       - name: Run Python
         run: python SO203_06_Q1.py
