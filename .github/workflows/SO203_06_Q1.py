@@ -27,11 +27,13 @@ P.5「組み込み関数」のソースコードを作成してください。
 import sys
 try:
 	with open( './SO203_06_Q1_input.txt', encoding='utf-8') as f:
-		file_txt = f.read()
-except Err1:
-try:
+		file_txt = f.readline()
+		print(file_txt)
+
 	txt = input('何か入力してください>')
-except Err2:
+except EOFError:
+	print(txt)
+	print(len(txt))
 	if len(txt) == 0:
 		txt = file_txt
 		txt_len = len(txt)
