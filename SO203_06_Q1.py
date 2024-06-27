@@ -25,7 +25,7 @@ P.5「組み込み関数」のソースコードを作成してください。
 
 # ここより下に解答を記載する。
 import sys
-with open( './SO203_06_Q1_input.txt', encoding='utf-8') as f:
+with open( 'SO203_06_Q1_input.txt', encoding='utf-8') as f:
 	file_txt = f.read()
 txt = input('何か入力してください>')
 if len(txt) == 0:
